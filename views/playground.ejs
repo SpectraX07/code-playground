@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/loader.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'editor-bg': '#1e1e1e',
+                        'terminal-bg': '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-8 flex-grow flex flex-col">
+        <h1 class="text-4xl font-light text-center mb-8">Elegant Code Playground</h1>
+        <div class="flex justify-center space-x-4 mb-6">
+            <select id="language" class="bg-gray-800 text-gray-100 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="python">Python</option>
+                <option value="javascript" selected>JavaScript</option>
+                <option value="java">Java</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="ruby">Ruby</option>
+                <option value="php">PHP</option>
+                <option value="swift">Swift</option>
+                <option value="go">Go</option>
+                <option value="rust">Rust</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="r">R</option>
+                <option value="sql">SQL</option>
+                <option value="typescript">TypeScript</option>
+                <option value="scala">Scala</option>
+                <option value="perl">Perl</option>
+                <option value="bash">Bash</option>
+                <option value="powershell">PowerShell</option>
+                <option value="objective-c">Objective-C</option>
+                <option value="lua">Lua</option>
+                <option value="matlab">MATLAB</option>
+            </select>
+            <button id="run" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Run Code
+            </button>
+        </div>
+        <div class="flex flex-col lg:flex-row flex-grow space-y-6 lg:space-y-0 lg:space-x-6">
+            <div id="editor" class="w-full lg:w-1/2 h-[400px] lg:h-auto rounded-lg overflow-hidden"></div>
+            <div id="terminal" class="w-full lg:w-1/2 h-[300px] lg:h-auto rounded-lg overflow-hidden bg-terminal-bg"></div>
+        </div>
+    </div>
+    <script src="/public/js/frontend.js"></script>
+</body>
+
+</html>

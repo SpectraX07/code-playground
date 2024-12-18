@@ -1,0 +1,32 @@
+{
+  "name": "code-playground",
+  "version": "1.0.0",
+  "description": "A customizable and interactive code playground for experimenting with and sharing JavaScript, HTML, and CSS snippets in real time.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpectraX07/code-playground.git"
+  },
+  "author": "Subrata Jana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpectraX07/code-playground/issues"
+  },
+  "homepage": "https://github.com/SpectraX07/code-playground#readme",
+  "dependencies": {
+    "@xterm/xterm": "^5.5.0",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
